@@ -2,13 +2,16 @@
 
 #define TAKEOFF_TIME 3
 #define QUEUE_SLEEP 1
+
 #define START_X 1 
 #define START_Y 1
-#define OCCUPIED 1
-#define LEAVE 0
+
 #define SPS_SPEED 1
 #define GRID_X 10
 #define GRID_Y 10
+
+#define OCCUPIED 1
+#define LEAVE 0
 
 // Lets define our drone states as an enum for easy checking and setting. 
 enum STATE 
