@@ -1,9 +1,8 @@
-#include "drone.h"
-#include<stdio.h>
-#include<stdlib.h>
+#include <stdio.h>
+#include <stdlib.h>
 
 struct Node {
-  Drone *value;
+  void *value;
   struct Node *next;
 };
 
@@ -14,6 +13,10 @@ struct Queue {
 
 struct Queue *NewQueue();
 
-void Add(struct Queue *q, Drone *new_node);
+void Dequeue(struct Queue *q);
+
+void *Peek(struct Queue *q);
+
+void Enqueue(struct Queue *q, void *new_node);
 
 void PrintQueue(struct Queue *q);
