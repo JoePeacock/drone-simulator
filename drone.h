@@ -9,7 +9,8 @@ enum STATE
   IN_FLIGHT, 
   LANDING_QUEUE, 
   LANDING, 
-  DONE
+  DONE,
+  FAILED
 };
 
 typedef struct {
