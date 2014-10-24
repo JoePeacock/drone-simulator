@@ -66,7 +66,22 @@ void TakeOff(Drone *d) {
   Fly(d);
 }
 
+
+/*
+ * Function:    move_drone
+ *
+ * Oh boy this is a fun function. Hacked together way to move vertically or
+ * horizontally. Done via passing a pointer to the drone's current position and 
+ * updating that value (pointer to the drone).
+ *
+ * Drone *d:           The drone you want to update.
+ * signed int partiy:  The difference in coordinates. Gets you positive or neg difference.
+ * signed int *value:  The pointer to the value on the drone, either x or y.    
+ * 
+ */
 void move_drone(Drone *d, signed int parity, signed int *value) {
+
+  // As we move along, we need to continously occupy and free spaces.
   d->grid[d->c_x][d->c_y] = LEAVE;
   if(parity > 0) {
     *value+=1;
@@ -76,6 +91,7 @@ void move_drone(Drone *d, signed int parity, signed int *value) {
     d->grid[d->c_x][d->c_y] = OCCUPIED;
   }
   printf("%s: %s (%d, %d) \n", d->drone_id, get_drone_state(d), d->c_x, d->c_y);
+
 }
 
 void Fly(Drone *d) {
@@ -90,12 +106,10 @@ void Fly(Drone *d) {
   }
 
   // Ok next step is to calculate where the hell we have to go.
-  // Lets design this real simple. First move laterally until at the correct columns,
-  // then move horizontally to your destination. Our speed will be 1sps (square per second)
+  // Our speed will be 1sps (square per second)
   signed int x_diff = d->d_x - d->c_x;
   signed int y_diff = d->d_y - d->c_y;
 
-  // As we move along, we need to continously occupy and free spaces.
   // First Horizontal
   while (d->c_x != d->d_x) {
     move_drone(d, x_diff, &d->c_x);
