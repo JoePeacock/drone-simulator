@@ -31,14 +31,3 @@ void Dequeue(struct Queue *q) {
 void *Peek(struct Queue *q) {
 	return q->head->value;
 }
-
-void PrintQueue(struct Queue *q) {
-
-	struct Node *ptr = q->head;
-	// while(ptr != NULL) {
-	// 	printf(" %s -> ",);
-	// 	ptr = ptr->next;
-	// }
-	return;
-
-}
