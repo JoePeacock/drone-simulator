@@ -3,13 +3,6 @@
 #include <stdio.h>
 #include <string.h>
 #include <unistd.h>
-#define TAKEOFF_TIME 3
-#define QUEUE_SLEEP 1
-#define START_X 1 
-#define START_Y 1
-#define OCCUPIED 1
-#define LEAVE 0
-#define SPS_SPEED 1
 
 Drone *InitDrone(const char *name, const char *package, const int x, const int y, struct Queue *q, int g[][10]) {
   Drone *d = (Drone *) malloc(sizeof(Drone));
@@ -90,7 +83,7 @@ void Fly(Drone *d) {
   // First step is set our drone in the grid.
   d->grid[d->c_x][d->c_y] = OCCUPIED;
 
-  if (d->d_x > 10 || d->d_y > 10) {
+  if (d->d_x > GRID_X || d->d_y > GRID_Y) {
     printf("Coordinates are out of range! Failed to travel. Returning to base. \n");
     set_drone_state(d, FAILED);
     return;

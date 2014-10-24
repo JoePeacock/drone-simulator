@@ -18,10 +18,10 @@ int main(int argc,char *argv[]) {
     // That is an NxN grid for our drone space and a queue for taking off
     // These are stored in "shared.h".
 
-    int grid[10][10];
+    int grid[GRID_X][GRID_Y];
     int i, j;
-    for (i = 0; i < 10; i++) {
-      for (j = 0; j < 10; j++) {
+    for (i = 0; i < GRID_X; i++) {
+      for (j = 0; j < GRID_Y; j++) {
         grid[i][j] = 0;
       }
     }
