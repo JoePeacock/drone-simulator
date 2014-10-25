@@ -137,9 +137,9 @@ void Fly(Drone *d) {
     return;
   }
   // Ok next step is to calculate where the hell we have to go.
-  // Our speed will be 1sps (square per second)
   signed int x_diff = d->d_x - d->c_x;
   signed int y_diff = d->d_y - d->c_y;
+  // Our speed will be 1sps (square per second)
   // First Horizontal
   while (d->c_x != d->d_x) {
     move_drone(d, x_diff, &d->c_x);

@@ -35,10 +35,13 @@ int main(int argc,char *argv[]) {
       return 0;
     }
 
+    int number_of_drones;
+    fscanf(fp, "%d", &number_of_drones);
+
     char drone_name[10], drone_package_id[10];
     int x, y;
 
-    pthread_t threads[15];
+    pthread_t threads[number_of_drones];
 
     // Here we read in each drone declared on a new line, and send them off!
     int rc;
