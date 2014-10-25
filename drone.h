@@ -20,8 +20,10 @@ enum STATE
   TAKEOFF_QUEUE, 
   TAKING_OFF, 
   IN_FLIGHT, 
-  LANDING_QUEUE, 
+  FLIGHT_EVADING,
   LANDING, 
+  ARRIVED,
+  DELIVERING,
   DONE,
   FAILED
 };
@@ -64,3 +66,7 @@ void TakeOff(Drone *d);
 void Fly(Drone *d);
 
 void move_drone(Drone *d, signed int parity, signed int *value);
+
+void LandDrone(Drone *d);
+
+void DeliverPackage(Drone *d);

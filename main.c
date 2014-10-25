@@ -38,7 +38,7 @@ int main(int argc,char *argv[]) {
     char drone_name[10], drone_package_id[10];
     int x, y;
 
-    pthread_t threads[3];
+    pthread_t threads[15];
 
     // Here we read in each drone declared on a new line, and send them off!
     int rc;
