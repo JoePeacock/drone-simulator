@@ -30,7 +30,7 @@ The outputs are printed to output.txt
 
 ### Design
 
-Included is the design_docs directory which containts the FSM and State Table.
+Included is the design_docs directory which containts the FSM and state table.
 
 ##### Software Design
 
