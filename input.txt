@@ -1,6 +1,11 @@
-5
-Joe computer 10,10
-Mike laptop 5,1
-Scott iphone 7,8
-Nick android 15,12
-Matt glasses 7,7
+10
+drone1 computer 10,10
+drone2 laptop 5,1
+drone3 iphone 7,8
+drone4 android 15,12
+drone5 glasses 7,7
+drone6 watch 5,5
+drone7 keyboard 8,5
+drone8 cash 3,9
+drone9 present 3,2
+drone10 socks 5,9
