@@ -60,6 +60,15 @@ void *StartDrone(void *vd) {
   return 0;
 }
 
+/*
+ * Function    TakeOff
+ *
+ * Takes the instantiated drone struct and adds it to the takeoff_queue.
+ * After that it waits to take off and updates the state to inflight.
+ *
+ * Drone *d: current drone struct.
+ 
+ */
 void TakeOff(Drone *d) {
   Enqueue(d->q, d);
   set_drone_state(d, TAKEOFF_QUEUE);
@@ -106,6 +115,7 @@ void move_drone(Drone *d, signed int parity, signed int *value) {
     *value-=1;
   }
 
+  // Evade step. Check if the next space is already occupied. If it is just wait.
   while (d->grid[d->c_x][d->c_y] == OCCUPIED) {
     set_drone_state(d, FLIGHT_EVADING);
     sleep(1);

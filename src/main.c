@@ -16,8 +16,6 @@ int main(int argc,char *argv[]) {
 
     // Instantiate our global variables.
     // That is an NxN grid for our drone space and a queue for taking off
-    // These are stored in "shared.h".
-
     int grid[GRID_X][GRID_Y];
     int i, j;
     for (i = 0; i < GRID_X; i++) {
@@ -26,6 +24,7 @@ int main(int argc,char *argv[]) {
       }
     }
 
+    // Create our queue to be used.
     struct Queue *queue = NewQueue();
 
     // Now that we have that created, lets read our drone file..

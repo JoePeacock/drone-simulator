@@ -1,5 +1,13 @@
 #include "queue.h"
 
+/*
+ * This is the TakeOff Queue implementation. I deided to reimplement a basic queue
+ * with a peek function included to look at the first element. 
+ *
+ * Below is a basic queue implementation. 
+ * 
+ */
+ 
 struct Queue *NewQueue() {
 	struct Queue *q = (struct Queue *) malloc(sizeof(struct Queue));
 	q->head = NULL;
