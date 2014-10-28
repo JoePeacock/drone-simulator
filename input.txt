@@ -1,0 +1,6 @@
+5
+Joe computer 10,10
+Mike laptop 5,1
+Scott iphone 7,8
+Nick android 15,12
+Matt glasses 7,7
