@@ -4,6 +4,21 @@
 #include <string.h>
 #include <unistd.h>
 
+/*
+ * Function *InitDrone
+ *
+ * The "constructor" that initalized the drone struct member variables. This is
+ * set while looping through the input file, and returns a pointer to a struct with
+ * the paramterized values.
+ *
+ * const char *name:       Name of the drone
+ * const char *package:    The pacakge the that drone is carrying
+ * const int y:            The y coordinate of the drone's destination
+ * const int x:            The x coordinate of the drone's destination
+ * struct Queue *q:        A pointer to the queue we initalized in main
+ * struct int g[][10]      A pointer to the grid we initalized in main.
+ * 
+ */
 Drone *InitDrone(const char *name, const char *package, const int x, const int y, struct Queue *q, int g[][10]) {
   Drone *d = (Drone *) malloc(sizeof(Drone));
   d->package_id = malloc(sizeof(strlen(package)));
@@ -67,7 +82,7 @@ void *StartDrone(void *vd) {
  * After that it waits to take off and updates the state to inflight.
  *
  * Drone *d: current drone struct.
- 
+
  */
 void TakeOff(Drone *d) {
   Enqueue(d->q, d);
