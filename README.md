@@ -40,4 +40,4 @@ Each drone has its own struct associated with it, and is populated by the input 
 
 After the thread begins it is added to the take-off queue. Once added it waits until it is first and line and then takes off (this takes 3 seconds). 
 
-One the drone "takes off" the drone is on the grid starting at 0,0. From here the drone navigates horizontally and then veritcally to its destination before landing. The drone moves at a speed of one square per second, being (0,0) to (1,0) taking 1 second.
+One the drone "takes off" the drone is on the grid starting at (0,0). From here the drone navigates horizontally and then veritcally to its destination before landing. The drone moves at a speed of one square per second, being (0,0) to (1,0) taking 1 second.
